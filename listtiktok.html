@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Harga Layanan</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <section class="price-list">
+        <h2>Daftar Harga Layanan</h2>
+        <div class="price-grid">
+            <div class="price-item" onclick="showPopup('100 Followers', 'Rp. 11.000')">
+                <h3>100 Followers</h3>
+                <p class="price">Rp. 11.000</p>
+            </div>
+            <div class="price-item" onclick="showPopup('210 Followers', 'Rp. 20.000')">
+                <h3>210 Followers</h3>
+                <p class="price">Rp. 20.000</p>
+            </div>
+            <div class="price-item" onclick="showPopup('320 Followers', 'Rp. 30.000')">
+                <h3>320 Followers</h3>
+                <p class="price">Rp. 30.000</p>
+            </div>
+            <div class="price-item" onclick="showPopup('450 Followers', 'Rp. 40.000')">
+                <h3>450 Followers</h3>
+                <p class="price">Rp. 40.000</p>
+            </div>
+            <div class="price-item" onclick="showPopup('1000 Followers', 'Rp. 95.000')">
+                <h3>1000 Followers</h3>
+                <p class="price">Rp. 95.000</p>
+            </div>
+            <div class="price-item" onclick="showPopup('5000 Followers', 'Rp. 65.000')">
+                <h3>5000 Followers</h3>
+                <p class="price">Rp. 65.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h2>Intruksi Pembayaran</h2>
+            <p id="popup-message"></p>
+            <p>Silakan transfer jumlah yang sesuai ke nomor Dana berikut:</p>
+            <p class="popup-number">081-224-166-524</p>
+            <p>Atau chat di WhatsApp</p>
+            <a href="https://wa.me/6281224166524" class="whatsapp-button">Click</a>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(item, price) {
+            document.getElementById('popup-message').innerText = `Silakan transfer ${price} untuk ${item}`;
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
